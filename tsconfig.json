@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "target": "ES2021",
+    "declaration": true,
+    "noImplicitOverride": true,
+    "sourceMap": true,
+    "declarationMap": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "rootDir": "src",
+    "outDir": "dist"
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "node-code-sandbox-mcp"]
+}
