@@ -3,5 +3,6 @@
   "runner": "node",
   "owner": "hoonowng",
   "name": "nodejs-mcp",
+  "description": "Run arbitrary JavaScript (ESM) in LM Studio: sandbox tools to write/run Node.js code, search npm packages, and inspect package types.",
   "revision": 1
 }

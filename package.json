@@ -1,36 +1,22 @@
 {
   "name": "nodejs-mcp",
   "version": "0.1.0",
-  "description": "LM Studio Plugin that exposes the node-code-sandbox-mcp toolset (run JS / shell, npm search, type lookup) using Docker-free local execution, wrapping the pristine upstream repo.",
+  "description": "Run arbitrary JavaScript (ESM) in LM Studio: sandbox tools to write/run Node.js code, search npm packages, and inspect package types.",
   "main": "dist/index.js",
-  "types": "dist/index.d.ts",
   "scripts": {
-    "setup": "node scripts/setup.cjs",
-    "build": "node scripts/setup.cjs && node ./node_modules/typescript/bin/tsc",
-    "typecheck": "node scripts/setup.cjs && node ./node_modules/typescript/bin/tsc --noEmit",
+    "build": "tsc",
     "dev": "lms dev",
-    "push": "lms push",
-    "clean:upstream": "node scripts/setup.cjs --clean"
+    "push": "lms push"
   },
-  "postinstall": "node scripts/setup.cjs",
-  "author": "hoonowng",
-  "license": "MIT",
   "dependencies": {
-    "@lmstudio/sdk": "^1.5.0",
-    "@modelcontextprotocol/sdk": "^1.20.0",
-    "mime-types": "^2.1.35",
-    "tmp": "^0.2.3",
-    "zod": "^3.24.0"
+    "@lmstudio/sdk": "^1.0.0",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
-    "@types/mime-types": "^2.1.4",
-    "@types/node": "^22.13.1",
-    "@types/tmp": "^0.2.4",
-    "typescript": "^5.9.0"
+    "@types/node": "^22.0.0",
+    "typescript": "^5.0.0"
   },
-  "files": [
-    "dist",
-    "scripts",
-    "manifest.json"
-  ]
+  "engines": {
+    "node": ">=18"
+  }
 }
